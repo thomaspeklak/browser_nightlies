@@ -1,1 +1,6 @@
 Some simple scripts to download the latest browser nightlies
+
+To run Firefox nightly parallel to your normal install on your Windows machine you have to
+- create a new profile for it (firefox -P)
+- start firefox with this profile using  firefox -p "<profile name>" -no-remote
+- and start your standard firefox with   forefox -p "default" -no-remote
