@@ -1,15 +1,12 @@
-# This script will download the latest Chrome nightly
-# and unzip it using 7zip (http://www.7-zip.org/) into
-# d:/tools/browsers/nightlies/chrome-win32
-
 require 'open-uri'
 
-CHROMIUM = 'http://build.chromium.org/buildbot/snapshots/chromium-rel-xp/'
+CHROMIUM = 'http://build.chromium.org/f/chromium/snapshots/chromium-rel-xp/'
 open(CHROMIUM + 'LATEST') do |f|
 	f.each do |line|
 		LATEST = line
 	end
 end
+puts "latest: #{LATEST}"
 
 system 'curl ' + CHROMIUM + LATEST + '/chrome-win32.zip > D:/temp/chromium.zip'
 
